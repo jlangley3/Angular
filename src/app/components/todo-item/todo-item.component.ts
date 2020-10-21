@@ -27,4 +27,15 @@ export class TodoItemComponent implements OnInit {
     return classes;
   }
 
+  onToggle(todo) {
+    // Toggle in UI
+    todo.completed = !todo.completed;
+    // Toggle on server
+  
+  }
+
+  onDelete(todo) {
+    this.deleteTodo.emit(todo);
+  }
+
 }
